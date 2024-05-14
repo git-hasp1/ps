@@ -64,6 +64,7 @@ body {
 
 .hex_2 {
   grid-area: 1 / 3 / 1 / 5;
+  clip-path: url("./assets/img/empty.svg");
 }
 
 .hex_3 {
