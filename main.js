@@ -81,3 +81,31 @@ window.addEventListener("keydown", (event) => {
     only_close_popup(modalVideo)
   };
 });
+
+
+// th popup
+const th = document.querySelector('#th');
+const thDiv = document.querySelector('#th-div');
+const modalTh = document.querySelector('#modal-th');
+const closeTh = document.querySelector('#close-modal-th-btn');
+const modalThBackground = document.querySelector("#modal-th .modal__box");
+
+console.log(closeTh)
+
+// const conteinsPopupThState = (node, cls = "open") => { 
+//   if (node.classList.contains(cls)) {
+//     video.pause();
+//     closePopup(node);
+//   } else {
+//     openPopup(node);
+//     video.play();
+//   }
+// };
+
+thDiv.addEventListener("click", () => {
+  conteinsPopupState(modalTh);
+});
+
+closeTh.addEventListener("click", () => {
+  conteinsPopupState(modalTh);
+});
