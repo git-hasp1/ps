@@ -1,0 +1,134 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+}
+
+/* MAIN STYLE */
+:root {
+  --color-primary: #0079c2;
+  --color-white: #ffffff;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  padding: 42px 0 0 167px;
+  gap: 5px;
+  grid-template-columns: repeat(6, 250px);
+  grid-template-rows: repeat(4, 218px);
+  background-color: var(--color-primary);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.hex {
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  clip-path: url("./assets/img/empty.svg");
+}
+
+.hex_1 {
+  grid-area: 1 / 1 / 1 / 3;
+}
+
+.hex_2 {
+  grid-area: 1 / 3 / 1 / 5;
+}
+
+.hex_3 {
+  grid-area: 1 / 5 / 1 / 7;
+}
+
+.hex_4 {
+  grid-area: 3 / 2 / 3 / 4;
+}
+
+.hex_5 {
+  grid-area: 3 / 4 / 3 / 6;
+}
+
+.hex_6 {
+  grid-area: 3 / 6 / 3 / 6;
+}
+
+.hex__video {
+  object-fit: cover;
+}
+
+.modal {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal__box {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-button {
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;  
+}
+
