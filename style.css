@@ -99,7 +99,9 @@ body {
   height: 100vh;
   z-index: 99998;
   background-color: rgba(0, 0, 0, 0.3);
-  transition: opacity .3s, visibility .3s;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
 }
 
 .modal__box {
@@ -130,10 +132,61 @@ body {
 
 .map {
   width: 100%;
-  height: 100%;  
+  height: 100%;
 }
 
 .th {
   width: 100%;
   height: 100%;
 }
+
+/* Page history */
+.history-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.history-page__content {
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.history-page__text {
+  font-size: 30px;
+  text-indent: 2em;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.history-page__img {
+  align-self: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.history-page__header {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 50px;
+  align-self: center;
+  padding: 50px 0 25px 0;
+}
+
+.history-page__header.main__header {
+  font-size: 60px;
+}
+
+.history-page__subtitle {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 30px;
+  align-self: center;
+  padding-bottom: 20px;
+  font-style: oblique;
+}
+
