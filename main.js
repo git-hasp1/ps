@@ -94,24 +94,11 @@ closeTh.addEventListener("click", () => {
 });
 
 
-// history popup
+// history page
 const history = document.querySelector("#history");
-// const modalHistory = document.querySelector("#modal-history");
 const closeHistory = document.querySelector("#close-history-page");
-// const modalHistoryBackground = document.querySelector("#modal-history .modal__box");
 
 history.addEventListener("click", () => {
   document.location.href = './pages/history.html'
 });
 
-closeHistory.addEventListener("click", () => {
-  // conteinsPopupState(modalHistory);
-  document.location.href = './index.html'
-  console.log('history')
-});
-
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    only_close_popup(modalHistory)
-  };
-});
