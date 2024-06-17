@@ -92,20 +92,39 @@ const modalThBackground = document.querySelector("#modal-th .modal__box");
 
 console.log(closeTh)
 
-// const conteinsPopupThState = (node, cls = "open") => { 
-//   if (node.classList.contains(cls)) {
-//     video.pause();
-//     closePopup(node);
-//   } else {
-//     openPopup(node);
-//     video.play();
-//   }
-// };
-
 thDiv.addEventListener("click", () => {
   conteinsPopupState(modalTh);
 });
 
 closeTh.addEventListener("click", () => {
   conteinsPopupState(modalTh);
+});
+
+// history popup
+const history = document.querySelector("#history");
+const modalHistory = document.querySelector("#modal-history");
+const closeHistory = document.querySelector("#close-modal-history-btn");
+const modalHistoryBackground = document.querySelector("#modal-history .modal__box");
+
+history.addEventListener("click", () => {
+  conteinsPopupState(modalHistory);
+});
+
+closeHistory.addEventListener("click", () => {
+  conteinsPopupState(modalHistory);
+});
+
+// modalMinimap.addEventListener("click", event => {
+//   if (event._isClickWithInModal) return;
+//   conteinsPopupState(modalMinimap)
+// })
+//
+// modalMapBackground.addEventListener("click", event => {
+//   event._isClickWithInModal = true
+// })
+//
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    only_close_popup(modalHistory)
+  };
 });
