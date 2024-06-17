@@ -96,16 +96,18 @@ closeTh.addEventListener("click", () => {
 
 // history popup
 const history = document.querySelector("#history");
-const modalHistory = document.querySelector("#modal-history");
-const closeHistory = document.querySelector("#close-modal-history-btn");
-const modalHistoryBackground = document.querySelector("#modal-history .modal__box");
+// const modalHistory = document.querySelector("#modal-history");
+const closeHistory = document.querySelector("#close-history-page");
+// const modalHistoryBackground = document.querySelector("#modal-history .modal__box");
 
 history.addEventListener("click", () => {
   document.location.href = './pages/history.html'
 });
 
 closeHistory.addEventListener("click", () => {
-  conteinsPopupState(modalHistory);
+  // conteinsPopupState(modalHistory);
+  document.location.href = './index.html'
+  console.log('history')
 });
 
 window.addEventListener("keydown", (event) => {

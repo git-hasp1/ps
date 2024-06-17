@@ -145,6 +145,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative; 
 }
 
 .history-page__content {
