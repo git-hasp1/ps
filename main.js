@@ -101,7 +101,7 @@ const closeHistory = document.querySelector("#close-modal-history-btn");
 const modalHistoryBackground = document.querySelector("#modal-history .modal__box");
 
 history.addEventListener("click", () => {
-  conteinsPopupState(modalHistory);
+  document.location.href = './pages/history.html'
 });
 
 closeHistory.addEventListener("click", () => {
