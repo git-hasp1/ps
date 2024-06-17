@@ -2,11 +2,8 @@
 
 // Common 
 const OPEN = "open"
-
 const openPopup = (node, cls = OPEN) => node.classList.add(cls);
-
 const closePopup = (node, cls = OPEN) => node.classList.remove(cls);
-
 const only_close_popup = (node, cls = "open") => node.classList.remove(cls);
 
 const conteinsPopupState = (node, cls = "open") => { 
@@ -16,6 +13,7 @@ const conteinsPopupState = (node, cls = "open") => {
     openPopup(node);
   }
 };
+
 
 // Map popup
 const minimap = document.querySelector("#minimap");
@@ -56,7 +54,6 @@ const modalVideoBackground = document.querySelector("#modal-video .modal__box");
 
 console.log(video)
 
-
 const conteinsPopupVideoState = (node, cls = "open") => { 
   if (node.classList.contains(cls)) {
     video.pause();
@@ -66,7 +63,6 @@ const conteinsPopupVideoState = (node, cls = "open") => {
     video.play();
   }
 };
-
 
 videoDiv.addEventListener("click", () => {
   conteinsPopupVideoState(modalVideo);
@@ -100,6 +96,7 @@ closeTh.addEventListener("click", () => {
   conteinsPopupState(modalTh);
 });
 
+
 // history popup
 const history = document.querySelector("#history");
 const modalHistory = document.querySelector("#modal-history");
@@ -114,15 +111,6 @@ closeHistory.addEventListener("click", () => {
   conteinsPopupState(modalHistory);
 });
 
-// modalMinimap.addEventListener("click", event => {
-//   if (event._isClickWithInModal) return;
-//   conteinsPopupState(modalMinimap)
-// })
-//
-// modalMapBackground.addEventListener("click", event => {
-//   event._isClickWithInModal = true
-// })
-//
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     only_close_popup(modalHistory)
