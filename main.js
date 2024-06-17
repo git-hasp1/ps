@@ -52,7 +52,6 @@ const modalVideo = document.querySelector("#modal-video");
 const closeVideo = document.querySelector("#close-modal-video-btn")
 const modalVideoBackground = document.querySelector("#modal-video .modal__box");
 
-console.log(video)
 
 const conteinsPopupVideoState = (node, cls = "open") => { 
   if (node.classList.contains(cls)) {
@@ -85,8 +84,6 @@ const thDiv = document.querySelector('#th-div');
 const modalTh = document.querySelector('#modal-th');
 const closeTh = document.querySelector('#close-modal-th-btn');
 const modalThBackground = document.querySelector("#modal-th .modal__box");
-
-console.log(closeTh)
 
 thDiv.addEventListener("click", () => {
   conteinsPopupState(modalTh);
